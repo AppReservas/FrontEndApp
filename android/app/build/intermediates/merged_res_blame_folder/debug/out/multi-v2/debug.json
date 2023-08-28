@@ -1364,7 +1364,7 @@
                     }
                 },
                 {
-                    "source": "/home/expansionti/AppReservas/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/expansionti/FrontEndApp/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -1402,23 +1402,6 @@
                     }
                 },
                 {
-                    "source": "/home/expansionti/AppReservas/android/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1",
-                        "startColumns": "4",
-                        "startOffsets": "16",
-                        "endColumns": "48",
-                        "endOffsets": "60"
-                    },
-                    "to": {
-                        "startLines": "694",
-                        "startColumns": "4",
-                        "startOffsets": "44325",
-                        "endColumns": "48",
-                        "endOffsets": "44369"
-                    }
-                },
-                {
                     "source": "/home/expansionti/.gradle/caches/transforms-3/510a5f9a868424f6700da666319866b7/transformed/jetified-startup-runtime-1.0.0/res/values/values.xml",
                     "from": {
                         "startLines": "2",
@@ -1433,6 +1416,23 @@
                         "startOffsets": "44242",
                         "endColumns": "82",
                         "endOffsets": "44320"
+                    }
+                },
+                {
+                    "source": "/home/expansionti/FrontEndApp/android/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1",
+                        "startColumns": "4",
+                        "startOffsets": "16",
+                        "endColumns": "48",
+                        "endOffsets": "60"
+                    },
+                    "to": {
+                        "startLines": "694",
+                        "startColumns": "4",
+                        "startOffsets": "44325",
+                        "endColumns": "48",
+                        "endOffsets": "44369"
                     }
                 },
                 {
@@ -1488,6 +1488,23 @@
                         "startOffsets": "40326",
                         "endColumns": "42",
                         "endOffsets": "40364"
+                    }
+                },
+                {
+                    "source": "/home/expansionti/FrontEndApp/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
+                    "from": {
+                        "startLines": "6,8",
+                        "startColumns": "4,4",
+                        "startOffsets": "154,258",
+                        "endColumns": "63,68",
+                        "endOffsets": "213,322"
+                    },
+                    "to": {
+                        "startLines": "657,658",
+                        "startColumns": "4,4",
+                        "startOffsets": "41723,41787",
+                        "endColumns": "63,68",
+                        "endOffsets": "41782,41851"
                     }
                 },
                 {
@@ -1638,23 +1655,6 @@
                         "endLines": "4566,4572,4582,6640,6644",
                         "endColumns": "24,24,24,24,24",
                         "endOffsets": "298387,298565,298849,368026,368153"
-                    }
-                },
-                {
-                    "source": "/home/expansionti/AppReservas/android/app/build/generated/res/resValues/debug/values/gradleResValues.xml",
-                    "from": {
-                        "startLines": "6,8",
-                        "startColumns": "4,4",
-                        "startOffsets": "154,258",
-                        "endColumns": "63,68",
-                        "endOffsets": "213,322"
-                    },
-                    "to": {
-                        "startLines": "657,658",
-                        "startColumns": "4,4",
-                        "startOffsets": "41723,41787",
-                        "endColumns": "63,68",
-                        "endOffsets": "41782,41851"
                     }
                 },
                 {

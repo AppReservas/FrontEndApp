@@ -1,19 +1,19 @@
-#Thu Aug 24 11:36:26 COT 2023
+#Fri Aug 25 08:40:55 COT 2023
 path.4=9/classes.dex
 path.3=14/classes.dex
 path.2=0/classes.dex
 path.1=0/classes.dex
 path.5=classes2.dex
 path.0=classes.dex
-base.4=/home/expansionti/AppReservas/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
-base.3=/home/expansionti/AppReservas/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
-base.2=/home/expansionti/AppReservas/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.1=/home/expansionti/AppReservas/android/app/build/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
-base.0=/home/expansionti/AppReservas/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.4=/home/expansionti/FrontEndApp/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/9/classes.dex
+base.3=/home/expansionti/FrontEndApp/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/14/classes.dex
+base.2=/home/expansionti/FrontEndApp/android/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.1=/home/expansionti/FrontEndApp/android/app/build/intermediates/dex/debug/mergeLibDexDebug/0/classes.dex
+base.0=/home/expansionti/FrontEndApp/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
 renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 renamed.5=classes6.dex
 renamed.4=classes5.dex
-base.5=/home/expansionti/AppReservas/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
+base.5=/home/expansionti/FrontEndApp/android/app/build/intermediates/dex/debug/mergeExtDexDebug/classes2.dex
