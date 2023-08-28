@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from "react";
-import { Usuario } from "../interfaces/appInterfaces";
+import reservasApi from "../api/reservasApi";
+import { LoginData, LoginResponse, Usuario } from "../interfaces/appInterfaces";
 import { authReducer, AuthState } from "./AuthReducer";
 
 type AuthContextProps = {
@@ -8,7 +9,7 @@ type AuthContextProps = {
     user: Usuario | null;
     status: 'checking' | 'authenticated' | 'not-authenticated';
     signUp: () => void;
-    signIn: () => void;
+    signIn: ( loginData: LoginData ) => void;
     logOut: () => void;
     removeError: () => void;
 }
@@ -26,10 +27,32 @@ export const AuthProvider = ({ children }: any) => {
 
     const [state, dispatch] = useReducer(authReducer, authInicialState);
 
+    const signIn = async({ correo, password }: LoginData) => {
+        
+        try {
+            const { data } = await reservasApi.post<LoginResponse>('/auth/login',{ correo, password });
+            dispatch({
+                type:'signUp',
+                payload: {
+                    token:data.token,
+                    user: data.usuario
+                }
+            });
+            
+        } catch (error) {
+            console.log( );
+            dispatch({
+                type: 'addError',
+                payload: 'Informacion incorrecta'
+            })
+        }
+    };
+
     const signUp = () => {};
-    const signIn = () => {};
     const logOut = () => {};
-    const removeError = () => {};
+    const removeError = () => {
+        dispatch({ type: 'removeError'})
+    };
     
     return (
         <AuthContext.Provider value={{
