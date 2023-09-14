@@ -4,7 +4,7 @@
             "outputFile": "com.appreservas.app-mergeDebugResources-29:/values-lo/values-lo.xml",
             "map": [
                 {
-                    "source": "/home/expansionti/.gradle/caches/transforms-3/55577a01871b042cf7bc0bff0edfc4d3/transformed/core-1.7.0/res/values-lo/values-lo.xml",
+                    "source": "C:\\Users\\kevinBautista\\.gradle\\caches\\transforms-3\\75e4635b66fa4e4e84e71b52579837ce\\transformed\\core-1.7.0\\res\\values-lo\\values-lo.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "/home/expansionti/.gradle/caches/transforms-3/70bec2b315b3ea737e84285f714d9159/transformed/appcompat-1.4.1/res/values-lo/values-lo.xml",
+                    "source": "C:\\Users\\kevinBautista\\.gradle\\caches\\transforms-3\\b14585e0ae3314e7a64bac79062dab1c\\transformed\\appcompat-1.4.1\\res\\values-lo\\values-lo.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

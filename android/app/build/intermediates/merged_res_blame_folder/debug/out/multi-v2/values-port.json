@@ -4,7 +4,7 @@
             "outputFile": "com.appreservas.app-mergeDebugResources-29:/values-port/values-port.xml",
             "map": [
                 {
-                    "source": "/home/expansionti/.gradle/caches/transforms-3/70bec2b315b3ea737e84285f714d9159/transformed/appcompat-1.4.1/res/values-port/values-port.xml",
+                    "source": "C:\\Users\\kevinBautista\\.gradle\\caches\\transforms-3\\b14585e0ae3314e7a64bac79062dab1c\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
