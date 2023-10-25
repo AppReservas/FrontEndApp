@@ -1,7 +1,7 @@
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-const baseURL = 'http://192.168.0.14:8080/api'
+const baseURL = 'https://sporty-xkp8.onrender.com/api'
 
 const reservasApi = axios.create({baseURL});
 
