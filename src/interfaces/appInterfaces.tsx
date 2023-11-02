@@ -24,6 +24,12 @@ export interface Usuario {
     uid: string;
     img?: string
 }
+//RateStar
+export interface StarRatingProps {
+    maxStars: number;
+    rating: number;
+    onRate: (rating: number) => void;
+}
 
 // Productos
 export interface ProductsResponse {
