@@ -1,7 +1,7 @@
 import { StackScreenProps } from '@react-navigation/stack';
 import React, { useEffect } from 'react'
 import { StyleSheet, Text, View } from 'react-native';
-import { ProductsStackParams } from '../navigator/ProductsNavigator';
+import { ProductsStackParams } from '../navigator/EstablecimientosNavigator';
 import { ScrollView } from 'react-native-gesture-handler';
 
 interface Props extends StackScreenProps<ProductsStackParams, 'ProductScreen'>{};
