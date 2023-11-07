@@ -40,7 +40,7 @@ export const EstablecimientosScreen = ({ navigation }: Props) => {
               })
             }
             >
-              {/* <Image source={item.img} style={styles.image} /> */}
+              <Image source={require('item.img')} style={styles.image} />
               <Text style={styles.title}>{item.nombre}</Text>
             </TouchableOpacity>
             </View>
