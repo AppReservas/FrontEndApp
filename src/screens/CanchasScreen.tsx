@@ -6,15 +6,15 @@ import { EstablecimientoContext } from '../context/EstablecimientosContext';
 import { StackScreenProps } from '@react-navigation/stack';
 import { EstablecimientosStackParams } from '../navigator/EstablecimientosNavigator';
 import { RefreshControl } from 'react-native-gesture-handler';
-import { useEstableciminetos } from '../hooks/useEstablecimientos';
+import { CampoDeportivoContext } from '../context/CampoDeportivoContext';
+
 
 interface Props extends StackScreenProps<EstablecimientosStackParams, 'EstablecimientosScreen'>{};
 
-export const EstablecimientosScreen = ({ navigation }: Props) => {
+export const CanchasScreen = ({ navigation }: Props) => {
 
   const [ isRefreshing, setIsRefreshing ] = useState( false );
-  // const { establecimientos } = useEstableciminetos()
-  const { establecimientos, loadEstablecimientos } = useContext( EstablecimientoContext );
+  const { canchas, loadCanchas } = useContext( CampoDeportivoContext );
 
   useEffect(() => {
     navigation.setOptions({
@@ -22,7 +22,7 @@ export const EstablecimientosScreen = ({ navigation }: Props) => {
         <TouchableOpacity
           activeOpacity={0.8}
           style={{ marginRight: 10}}
-          onPress={ () => navigation.navigate('EstablecimientoScreen', {})}
+          onPress={ () => navigation.navigate('CampoDeportivoScreen', {})}
         >
           <Text>Agregar</Text>
         </TouchableOpacity>
@@ -32,7 +32,7 @@ export const EstablecimientosScreen = ({ navigation }: Props) => {
   
   const setEstablecimientos = async() => {
     setIsRefreshing( true );
-    await loadEstablecimientos();
+    await loadCanchas();
     setIsRefreshing( false );
   }
 
@@ -40,18 +40,18 @@ export const EstablecimientosScreen = ({ navigation }: Props) => {
     <View style={styles.container}>
       <Text style={styles.logo}> Sporty</Text>
         <FlatList 
-          data={establecimientos}
+          data={canchas}
           keyExtractor={ (p) => p._id }
           renderItem={ ({item, index}) => (
             <View key={index} style={styles.establecimiento}> 
             <TouchableOpacity           
             activeOpacity={0.8}
-            // onPress={ 
-            //   () => navigation.navigate('CanchasScreen', {
-            //     id: item._id,
-            //     name: item.nombre
-            //   })
-            // }
+            onPress={ 
+              () => navigation.navigate('CampoDeportivoScreen', {
+                id: item._id,
+                name: item.nombre
+              })
+            }
             >
               {/* <Image source={require('item.img')} style={styles.image} /> */}
               <Text style={styles.title}>{item.nombre}</Text>

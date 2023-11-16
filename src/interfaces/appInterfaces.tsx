@@ -31,33 +31,46 @@ export interface StarRatingProps {
     onRate: (rating: number) => void;
 }
 
-// Productos
-export interface ProductsResponse {
+// Canchas
+export interface CanchasResponse {
     total: number;
-    productos: Producto[];
+    canchas: Cancha[];
 }
 
-export interface Producto {
-    precio: number;
+export interface Cancha {
+    deporte: Deporte;
     _id: string;
     nombre: string
-    categoria: Categoria;
-    usuario: Categoria;
+    establecimiento: Establecimiento;
+    usuario: Establecimiento;
+    capacidad: number;
     img?: string;
 }
 
-
-export interface CategoriasResponse {
+//Establecimientos
+export interface EstablecimientosResponse {
     total: number;
-    categorias: Categoria[]
+    establecimientos: Establecimiento[]
 }
 
-export interface Categoria {
+export interface Establecimiento {
     _id: string;
     nombre: string;
+    direccion: string;
+    telefono: number;
     usuario?: CreadoPor; 
 }
 
+//Deportes
+export interface DeporteResponse {
+    total: number;
+    deportes: Deporte[]
+}
+
+export interface Deporte{
+    _id: string;
+    deporte: string
+}
 export interface CreadoPor {
     _id: string;
     nombre: string;

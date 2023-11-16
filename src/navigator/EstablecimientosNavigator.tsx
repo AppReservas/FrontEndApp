@@ -1,12 +1,15 @@
 import { createStackNavigator } from '@react-navigation/stack'
 import React from 'react'
 import { EstablecimientosScreen } from '../screens/EstablecimientosScreen';
-import { ProductScreen } from '../screens/ProductScreen';
+import { EstablecimientoScreen } from '../screens/EstablecimientoScreen';
+import { CampoDeportivoScreen } from '../screens/CampoDeportivoScreen';
 
 
 export type EstablecimientosStackParams = {
     EstablecimientosScreen: undefined,
-    ProductScreen: { id?: string, name?: string }
+    EstablecimientoScreen: { id?: string, name?: string }
+    CampoDeportivoScreen: { id?: string, name?: string }
+    
 }
 
 const Stack = createStackNavigator();
@@ -30,10 +33,13 @@ export const EstablecimientosNavigator = () => {
             options={{title: 'Establecimientos'}}
         />
         <Stack.Screen 
-            name="ProductScreen"
-            component={ ProductScreen }
-            options={{title: 'Producto'}}
-        />       
+            name="CampoDeportivoScreen"
+            component={ CampoDeportivoScreen }
+        />
+        <Stack.Screen
+            name="EstablecimientoScreen"
+            component={ EstablecimientoScreen }
+        />
     </Stack.Navigator>
   )
 }
