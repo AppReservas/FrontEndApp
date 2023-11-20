@@ -3,14 +3,17 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { Navigator } from './src/navigator/Navigator';
 import { AuthProvider } from './src/context/AuthContext';
-import { ProductProvider } from './src/context/CampoDeportivoContext';
+import { EstablecimientoProvider } from './src/context/EstablecimientosContext';
+import { CanchaProvider } from './src/context/CampoDeportivoContext';
 
 const AppState = ({ children }: any) => {
   return (
     <AuthProvider>
-      {/* <ProductProvider> */}
-      {children}
-      {/* </ProductProvider> */}
+      <EstablecimientoProvider>
+        {/* <CanchaProvider> */}
+          {children}
+        {/* </CanchaProvider>     */}
+      </EstablecimientoProvider>
     </AuthProvider>
   )
 }

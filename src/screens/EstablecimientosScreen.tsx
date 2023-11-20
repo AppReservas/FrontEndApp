@@ -6,15 +6,14 @@ import { EstablecimientoContext } from '../context/EstablecimientosContext';
 import { StackScreenProps } from '@react-navigation/stack';
 import { EstablecimientosStackParams } from '../navigator/EstablecimientosNavigator';
 import { RefreshControl } from 'react-native-gesture-handler';
-import { useEstableciminetos } from '../hooks/useEstablecimientos';
 
 interface Props extends StackScreenProps<EstablecimientosStackParams, 'EstablecimientosScreen'>{};
 
 export const EstablecimientosScreen = ({ navigation }: Props) => {
 
   const [ isRefreshing, setIsRefreshing ] = useState( false );
-  // const { establecimientos } = useEstableciminetos()
-  const { establecimientos, loadEstablecimientos } = useContext( EstablecimientoContext );
+  const { establishments, loadEstablishments } = useContext( EstablecimientoContext );
+  
 
   useEffect(() => {
     navigation.setOptions({
@@ -23,37 +22,42 @@ export const EstablecimientosScreen = ({ navigation }: Props) => {
           activeOpacity={0.8}
           style={{ marginRight: 10}}
           onPress={ () => navigation.navigate('EstablecimientoScreen', {})}
-        >
+          >
           <Text>Agregar</Text>
-        </TouchableOpacity>
+        </TouchableOpacity>    
       )
     })
   }, [])
   
   const setEstablecimientos = async() => {
     setIsRefreshing( true );
-    await loadEstablecimientos();
+    await loadEstablishments();
     setIsRefreshing( false );
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}> Sporty</Text>
         <FlatList 
-          data={establecimientos}
+          data={establishments}
           keyExtractor={ (p) => p._id }
           renderItem={ ({item, index}) => (
             <View key={index} style={styles.establecimiento}> 
             <TouchableOpacity           
             activeOpacity={0.8}
+            onPress={ () => navigation.navigate('CanchasScreen',{
+              establishmentId: item._id,
+              name: item.nombre
+            })}
             // onPress={ 
-            //   () => navigation.navigate('CanchasScreen', {
+            //   () => navigation.navigate('EstablecimientoScreen', {
             //     id: item._id,
-            //     name: item.nombre
+            //     name: item.nombre,
+            //     adress: item.direccion,
+            //     phone: item.telefono
             //   })
             // }
             >
-              {/* <Image source={require('item.img')} style={styles.image} /> */}
+              <Image source={{uri: (item.img) ? item.img : ':p' }} style={styles.image} />
               <Text style={styles.title}>{item.nombre}</Text>
             </TouchableOpacity>
             </View>

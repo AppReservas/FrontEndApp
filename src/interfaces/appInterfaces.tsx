@@ -58,6 +58,7 @@ export interface Establecimiento {
     nombre: string;
     direccion: string;
     telefono: number;
+    img?: string;
     usuario?: CreadoPor; 
 }
 

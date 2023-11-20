@@ -2,10 +2,10 @@ import React, { useContext } from 'react'
 import { createStackNavigator } from '@react-navigation/stack';
 import { LoginScreen } from '../screens/LoginScreen';
 import { RegisterScreen } from '../screens/RegisterScreen';
-import { ProtectedScreen } from '../screens/ProtectedScreen';
 import { AuthContext } from '../context/AuthContext';
 import { LoadingScreen } from '../screens/LoadingScreen';
 import { EstablecimientosNavigator } from './EstablecimientosNavigator';
+import { CanchasNavigator } from './CanchasNavigator';
 
 
 const Stack = createStackNavigator();
@@ -37,6 +37,7 @@ export const Navigator = () => {
           : (
             <>
             <Stack.Screen name="EstablecimientosNavigator" component={EstablecimientosNavigator} />
+            {/* <Stack.Screen name="CanchasNavigator" component={CanchasNavigator} /> */}
             {/* <Stack.Screen name="ProtectedScreen" component={ProtectedScreen} /> */}
             </>
           )

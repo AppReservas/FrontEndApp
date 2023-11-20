@@ -1,23 +1,25 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Text, View, FlatList, StyleSheet, TouchableOpacity, Image } from 'react-native';
 
-import { EstablecimientoContext } from '../context/EstablecimientosContext';
-
 import { StackScreenProps } from '@react-navigation/stack';
-import { EstablecimientosStackParams } from '../navigator/EstablecimientosNavigator';
 import { RefreshControl } from 'react-native-gesture-handler';
 import { CampoDeportivoContext } from '../context/CampoDeportivoContext';
+import { EstablecimientosStackParams } from '../navigator/EstablecimientosNavigator';
 
+interface Props extends StackScreenProps<EstablecimientosStackParams,'CanchasScreen'>{};
 
-interface Props extends StackScreenProps<EstablecimientosStackParams, 'EstablecimientosScreen'>{};
+export const CanchasScreen = ({ navigation, route }: Props) => {
 
-export const CanchasScreen = ({ navigation }: Props) => {
-
+  const { establishmentId = '', name = ''} = route.params;
+  
   const [ isRefreshing, setIsRefreshing ] = useState( false );
   const { canchas, loadCanchas } = useContext( CampoDeportivoContext );
+  const _id = establishmentId;
+  const nombre = name;
 
   useEffect(() => {
     navigation.setOptions({
+      title: (name) ? name : 'Cancha Nueva',
       headerRight: () => (
         <TouchableOpacity
           activeOpacity={0.8}
@@ -28,17 +30,24 @@ export const CanchasScreen = ({ navigation }: Props) => {
         </TouchableOpacity>
       )
     })
+  }, [nombre])
+
+  useEffect(() =>  {
+    setCanchas();
   }, [])
   
-  const setEstablecimientos = async() => {
+  const setCanchas = async() => {
     setIsRefreshing( true );
+    console.log(canchas, 'Muestrame las canchas');
     await loadCanchas();
+    
+    
     setIsRefreshing( false );
   }
 
   return (
     <View style={styles.container}>
-      <Text style={styles.logo}> Sporty</Text>
+      <Text style={styles.logo}>{_id}</Text>
         <FlatList 
           data={canchas}
           keyExtractor={ (p) => p._id }
@@ -48,8 +57,8 @@ export const CanchasScreen = ({ navigation }: Props) => {
             activeOpacity={0.8}
             onPress={ 
               () => navigation.navigate('CampoDeportivoScreen', {
-                id: item._id,
-                name: item.nombre
+                canchaid: item._id,
+                name: item.nombre,
               })
             }
             >
@@ -63,7 +72,7 @@ export const CanchasScreen = ({ navigation }: Props) => {
           refreshControl={
             <RefreshControl 
               refreshing= { isRefreshing }
-              onRefresh={ setEstablecimientos }
+              onRefresh={ setCanchas }
             />
           }
         />
