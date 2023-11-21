@@ -1,0 +1,4 @@
+#Wed Nov 15 16:53:00 COT 2023
+base.0=C\:\\Users\\kevinBautista\\Documents\\GitHub\\FrontEndApp\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
